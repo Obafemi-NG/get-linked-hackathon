@@ -1,0 +1,14 @@
+.btn {
+  background-image: var(--gradient-color);
+  font-size: var(--s-font-size);
+  color: var(--white-font-color);
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  padding: 1rem 2.5rem;
+}
+
+.btn:hover {
+  background-image: var(--gradient-color-hover);
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+/* @import "./variables.css"; */
+
+.logoText {
+  font-family: var(--header-font);
+  font-size: var(--xl-font-size);
+  font-weight: 700;
+  color: var(--white-font-color);
+}
+.linked {
+  color: var(--bright-purple);
+}

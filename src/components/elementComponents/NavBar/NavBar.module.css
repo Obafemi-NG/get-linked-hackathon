@@ -1,0 +1,26 @@
+.navbarContainer {
+  background-color: var(--main-background-color);
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 3rem 8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+}
+
+.links,
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+.navlinks {
+  margin-right: 3.5rem;
+}
+.linkText {
+  color: var(--white-font-color);
+  font-size: var(--s-font-size);
+  font-family: var(--text-font);
+}

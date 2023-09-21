@@ -1,0 +1,16 @@
+:root {
+  --header-font: "Clash Display", sans-serif;
+  --text-font: "Montserrat", sans-serif;
+  --time-font: "Unica One", cursive;
+  --gradient-color: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+  --gradient-color-hover: linear-gradient(320deg, #903aff 0%, #fe34b9 100%);
+  --main-background-color: #150e28;
+  --bright-purple: #d434fe;
+  --white-font-color: #fff;
+  --xs-font-size: 0.875rem;
+  --s-font-size: 1rem;
+  --md-font-size: 1.25rem;
+  --l-font-size: 1.5rem;
+  --xl-font-size: 2.25rem;
+  --xxl-font-size: 5rem;
+}
