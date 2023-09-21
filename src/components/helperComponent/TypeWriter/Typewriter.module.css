@@ -1,0 +1,7 @@
+.typeText {
+  font-size: var(--xl-font-size);
+  font-family: var(--text-font);
+  color: var(--white-font-color);
+  font-weight: 700;
+  font-style: italic;
+}

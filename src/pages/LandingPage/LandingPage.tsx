@@ -1,7 +1,12 @@
 import { FC } from "react";
+import Hero from "../../components/elementComponents/Hero/Hero";
 
 const LandingPage: FC = () => {
-  return <div>LandingPage</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default LandingPage;

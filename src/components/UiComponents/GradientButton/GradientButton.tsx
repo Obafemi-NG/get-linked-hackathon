@@ -3,7 +3,7 @@ import styles from "./GradientButton.module.css";
 
 type Props = {
   buttonText: string;
-  onClickFunction?: MouseEventHandler<HTMLButtonElement>;
+  onClickFunction: MouseEventHandler<HTMLButtonElement>;
 };
 
 const GradientButton: FC<Props> = ({ buttonText, onClickFunction }: Props) => {

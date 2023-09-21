@@ -1,0 +1,82 @@
+.heroContainer {
+  padding-top: 2rem;
+  padding-left: 8rem;
+  position: relative;
+  height: 85vh;
+  border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+}
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  position: relative;
+}
+.typewriterContainer {
+  position: absolute;
+  right: 3.44rem;
+}
+.typeSetIcon {
+  position: absolute;
+  right: 3.44rem;
+  top: 4.87rem;
+}
+
+.leftSection {
+  width: 62%;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: relative;
+}
+.heroHeader {
+  font-family: var(--header-font);
+  font-size: var(--xxl-font-size);
+  font-weight: 700;
+  color: var(--white-font-color);
+}
+.span {
+  color: var(--bright-purple);
+}
+.textIcon {
+  width: 48px;
+}
+.techText {
+  position: relative;
+}
+.creativeIcon {
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+}
+.heroSubheader {
+  font-size: var(--md-font-size);
+  font-family: var(--text-font);
+  color: var(--white-font-color);
+  margin-top: 0.5rem;
+  width: 72%;
+}
+.buttonContainer {
+  margin-top: 2.56rem;
+}
+
+.heroImage,
+.heroImage2 {
+  width: 40%;
+  position: absolute;
+}
+.heroImage {
+  bottom: 0;
+  right: 0;
+}
+.heroImage2 {
+  right: 5.94rem;
+  bottom: 0;
+}
+
+.purpleFlare {
+  width: 30%;
+  position: absolute;
+  top: -5rem;
+  left: 16rem;
+}

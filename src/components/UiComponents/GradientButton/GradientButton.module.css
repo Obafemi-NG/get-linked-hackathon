@@ -5,6 +5,7 @@
   border-radius: 0.25rem;
   outline: none;
   border: none;
+  transition: 0.8s;
   padding: 1rem 2.5rem;
 }
 

@@ -1,13 +1,15 @@
 .navbarContainer {
   background-color: var(--main-background-color);
-  /* max-width: 1200px; */
-  margin: 0 auto;
   background-color: transparent;
+  border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+}
+.navbarContent {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 3rem 8rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
 }
 
 .links,
