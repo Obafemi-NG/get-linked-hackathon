@@ -54,4 +54,5 @@ export interface SelectInputProps {
   inputRef?: LegacyRef<HTMLSelectElement>;
   placeholder?: string;
   options: SelectOption[];
+  small: boolean;
 }

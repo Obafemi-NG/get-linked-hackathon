@@ -1,11 +1,11 @@
 export const fetchFuntion = async (
   reqMethod: string,
-  url: string
-  //   reqBody: object
+  url: string,
+  reqBody?: object
 ) => {
   const response = await fetch(url, {
     method: reqMethod,
-    // body: JSON.stringify(reqBody),
+    body: JSON.stringify(reqBody),
     headers: {
       "Content-Type": "Application/json",
     },

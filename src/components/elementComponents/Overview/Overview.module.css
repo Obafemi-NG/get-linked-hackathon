@@ -71,6 +71,23 @@
 .btnContainer {
   margin-top: 2.5rem;
 }
+.reversedOverview {
+  position: relative;
+}
+.purpleFlare,
+.purpleFlare2 {
+  width: 30%;
+  position: absolute;
+  z-index: 1;
+}
+.purpleFlare {
+  top: -1rem;
+  left: 10%;
+}
+.purpleFlare2 {
+  bottom: -1rem;
+  right: 10%;
+}
 
 @media screen and (max-width: 480px) {
   .overviewContent {

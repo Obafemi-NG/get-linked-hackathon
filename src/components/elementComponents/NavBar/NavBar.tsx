@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Logo from "../../UiComponents/Logo/Logo";
 
 import styles from "./NavBar.module.css";
@@ -6,7 +6,25 @@ import { hashlinks } from "../../../constants/constants";
 import GradientButton from "../../UiComponents/GradientButton/GradientButton";
 import { NavLink, useNavigate } from "react-router-dom";
 
+import { motion } from "framer-motion";
+
+import close from "../../../assets/icons/close.svg";
+
+const containerVariants = {
+  hidden: {
+    x: "100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      type: "spring",
+    },
+  },
+  exit: { x: "-100vw", transition: { ease: "easeInOut" } },
+};
+
 const NavBar: FC = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   const navigate = useNavigate();
   const handleRegister = () => {
     navigate("/register");
@@ -17,11 +35,12 @@ const NavBar: FC = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <section className={styles.navbarContainer}>
       <div className={styles.navbarContent}>
         <Logo />
-        {/* <div className={styles.links}>
+        <div className={styles.links}>
           <ul className={styles.navlinks}>
             {hashlinks.map((data) => (
               <li key={data.id} className={styles.linkContainer}>
@@ -50,8 +69,11 @@ const NavBar: FC = () => {
               buttonText="Register"
             />
           </div>
-        </div> */}
-        <div className={styles.hamburgerContainer}>
+        </div>
+        <div
+          className={styles.hamburgerContainer}
+          onClick={() => setShowMenu(true)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="19"
@@ -65,6 +87,52 @@ const NavBar: FC = () => {
             />
           </svg>
         </div>
+        {showMenu && (
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className={styles.mobileLinks}
+          >
+            <div className={styles.closeBtnContainer}>
+              <img
+                src={close}
+                alt="close"
+                className={styles.closeBtn}
+                onClick={() => setShowMenu(false)}
+              />
+            </div>
+            <ul className={styles.navlinks}>
+              {hashlinks.map((data) => (
+                <li key={data.id} className={styles.linkContainer}>
+                  <p
+                    onClick={() => scrollToSection(data.url)}
+                    className={styles.linkText}
+                  >
+                    {data.title}
+                  </p>
+                </li>
+              ))}
+              <li>
+                <NavLink
+                  to="contact-us"
+                  className={({ isActive }) =>
+                    isActive ? `${styles.activeLink}` : `${styles.link}`
+                  }
+                >
+                  <p className={styles.linkText}> Contact </p>{" "}
+                </NavLink>{" "}
+              </li>
+            </ul>
+            <div className={styles.btnContainer}>
+              <GradientButton
+                onClickFunction={handleRegister}
+                buttonText="Register"
+              />
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

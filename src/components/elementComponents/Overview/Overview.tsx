@@ -13,6 +13,8 @@ import LeftReveal from "../../helperComponent/LeftReveal";
 import RightRevealSpringy from "../../helperComponent/RightRevealSpringy";
 import GradientButton from "../../UiComponents/GradientButton/GradientButton";
 
+import purpleFlare from "../../../assets/images/purple_flare.png";
+
 const Overview: FC = () => {
   return (
     <section className={styles.overviewContainer} id="overview">
@@ -49,6 +51,16 @@ const Overview: FC = () => {
           </div>
         </div>
         <div className={` ${styles.reversedOverview} `}>
+          <img
+            src={purpleFlare}
+            alt="purple_flare"
+            className={styles.purpleFlare}
+          />
+          <img
+            src={purpleFlare}
+            alt="purple_flare"
+            className={styles.purpleFlare2}
+          />
           <div className={styles.reversedDescContainer}>
             <LeftReveal>
               <>

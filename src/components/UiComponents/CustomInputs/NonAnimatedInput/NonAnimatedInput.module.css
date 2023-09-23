@@ -24,3 +24,8 @@
 .input::placeholder {
   font-size: 0.75rem;
 }
+@media screen and (max-width: 480px) {
+  .inputPair {
+    width: 100%;
+  }
+}

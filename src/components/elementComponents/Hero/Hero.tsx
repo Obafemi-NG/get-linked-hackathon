@@ -1,7 +1,4 @@
 import { FC } from "react";
-
-import { motion } from "framer-motion";
-
 import Typewriter from "../../helperComponent/TypeWriter/Typewriter";
 
 import styles from "./Hero.module.css";
@@ -88,9 +85,7 @@ const Hero: FC = () => {
       </div>
       <div className={styles.rightSide}>
         <img src={heroImage} alt="hero_image" className={styles.heroImage} />
-        <motion.img
-          // animate={{ rotate: 360 }}
-          // transition={{ duration: 3600, repeat: Infinity }}
+        <img
           src={heroImage2}
           alt="hero_image_2"
           className={styles.heroImage2}

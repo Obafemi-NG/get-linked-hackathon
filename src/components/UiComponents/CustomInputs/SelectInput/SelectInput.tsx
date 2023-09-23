@@ -10,14 +10,18 @@ const SelectInput: FC<SelectInputProps> = ({
   inputRef,
   placeholder,
   options,
+  small,
 }) => {
   return (
-    <div className={styles.inputPair}>
+    <div
+      className={`${styles.inputPair} ${small ? styles.smallInputPair : ""} `}
+    >
       <label htmlFor={inputName} className={styles.label}>
         {inputLabel}
       </label>
 
       <select
+        key={inputLabel}
         name={inputName}
         id={inputName}
         required={requiredValue}
@@ -28,7 +32,12 @@ const SelectInput: FC<SelectInputProps> = ({
           {placeholder}
         </option>
         {options.map((data) => {
-          return <option value={data.id}> {data.name} </option>;
+          return (
+            <option key={data.id} value={data.id}>
+              {" "}
+              {data.name}{" "}
+            </option>
+          );
         })}
       </select>
     </div>

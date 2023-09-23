@@ -1,6 +1,8 @@
-import { FC, useRef, useState } from "react";
+import { FC, FormEvent, useEffect, useRef, useState } from "react";
 
 import styles from "./RegisterPage.module.css";
+
+import { motion } from "framer-motion";
 
 import GradientButton from "../../components/UiComponents/GradientButton/GradientButton";
 
@@ -9,36 +11,93 @@ import womanWalking from "../../assets/icons/woman_walking.svg";
 import manWalking from "../../assets/icons/man_walking.svg";
 import NonAnimatedInput from "../../components/UiComponents/CustomInputs/NonAnimatedInput/NonAnimatedInput";
 import SelectInput from "../../components/UiComponents/CustomInputs/SelectInput/SelectInput";
+import NavBar from "../../components/elementComponents/NavBar/NavBar";
+import { fetchFuntion } from "../../utils/fetchFunction";
+import { SelectOption } from "../../models/models";
+import Modal from "../../components/helperComponent/Modal/Modal";
+import LeftRevealSpringy from "../../components/helperComponent/LeftRevealSpringy";
 
 const Register: FC = () => {
-  const handleClick = () => {};
+  const [options, setOptions] = useState<SelectOption[]>([]);
+  const [showModal, setShowModal] = useState<boolean>(false);
   const teamNameRef = useRef<HTMLInputElement | null>(null);
   const phoneRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const projectTopicRef = useRef<HTMLInputElement | null>(null);
   const categoryRef = useRef<HTMLSelectElement | null>(null);
   const groupSizeRef = useRef<HTMLSelectElement | null>(null);
-  const options = [
-    { id: 1, name: "jksks" },
-    { id: 1, name: "jkspdld" },
-    { id: 1, name: "jopoeks" },
-  ];
-  const [agree, setAgree] = useState(false);
 
+  const [agree, setAgree] = useState(true);
   const checkboxHandler = () => {
     setAgree(!agree);
+    console.log(agree);
   };
+
+  const handleClick = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fetchCategory = async () => {
+      const url = "https://backend.getlinked.ai/hackathon/registration";
+      const userData = {
+        team_name: teamNameRef.current?.value,
+        phone_number: phoneRef.current?.value,
+        email: emailRef.current?.value,
+        project_topic: projectTopicRef.current?.value,
+        category: categoryRef.current?.value,
+        group_size: groupSizeRef.current?.value,
+        privacy_poclicy_accepted: agree,
+      };
+      const fetchedData = await fetchFuntion("POST", url, userData);
+      console.log(fetchedData);
+      setShowModal(true);
+    };
+    try {
+      fetchCategory();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    const fetchCategory = async () => {
+      const url = "https://backend.getlinked.ai/hackathon/categories-list";
+      const fetchedData = await fetchFuntion("GET", url);
+      setOptions(fetchedData);
+      console.log(fetchedData);
+    };
+    try {
+      fetchCategory();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+  const groupSize = [
+    { id: 1, name: "1 - 5" },
+    { id: 2, name: "5 - 10" },
+    { id: 3, name: "10 - 15" },
+    { id: 4, name: "15 - 20" },
+  ];
+
   return (
     <section className={styles.pageContainer}>
+      <div className={styles.navbarContainer}>
+        <NavBar />
+      </div>
       <div className={styles.pageContent}>
         <div className={styles.leftSide}>
-          <img
-            src={registerImage}
-            alt="register_img"
-            className={styles.pageImage}
-          />
+          <LeftRevealSpringy>
+            <img
+              src={registerImage}
+              alt="register_img"
+              className={styles.pageImage}
+            />
+          </LeftRevealSpringy>
         </div>
-        <div className={styles.rightSide}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ scale: 1.1, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2, type: "tween" }}
+          className={styles.rightSide}
+        >
           <div className={styles.formContainer}>
             <h1 className={styles.formTitle}>Register</h1>
             <p className={styles.subTitle}>
@@ -91,6 +150,7 @@ const Register: FC = () => {
                   requiredValue={true}
                   inputRef={categoryRef}
                   options={options}
+                  small={false}
                 />
                 <SelectInput
                   inputLabel="Group Size"
@@ -98,7 +158,8 @@ const Register: FC = () => {
                   placeholder="Select"
                   requiredValue={true}
                   inputRef={groupSizeRef}
-                  options={options}
+                  options={groupSize}
+                  small={true}
                 />
               </div>
               <p className={styles.warning}>
@@ -121,8 +182,9 @@ const Register: FC = () => {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
+      {showModal && <Modal />}
     </section>
   );
 };

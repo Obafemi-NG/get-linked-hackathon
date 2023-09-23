@@ -2,6 +2,7 @@
   background-color: var(--main-background-color);
   background-color: transparent;
   border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+  position: relative;
 }
 .navbarContent {
   max-width: 1200px;
@@ -20,6 +21,12 @@
 .navlinks {
   margin-right: 3.5rem;
 }
+.activeLink .linkText {
+  background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .linkText {
   color: var(--white-font-color);
   font-size: var(--s-font-size);
@@ -32,29 +39,47 @@
 .hamburgerContainer {
   display: none;
 }
+.mobileLinks {
+  display: none;
+}
 
 @media screen and (max-width: 480px) {
   .navbarContent {
     padding: 1.5rem 1rem;
   }
   .links {
+    display: none;
+  }
+  .mobileLinks {
     position: absolute;
     background-color: var(--main-background-color);
     border-radius: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.04);
-    top: 4.6rem;
+    /* top: 4.6rem; */
+    top: 0;
     right: 0;
-    width: 50%;
+    width: 60%;
     padding: 4rem 1.5rem 6rem;
     z-index: 10;
+    display: block;
   }
   .links,
   .navlinks {
     flex-direction: column;
     align-items: unset;
+    gap: 2.5rem;
   }
-  .linkText {
-    /* background-color: green; */
+  .closeBtnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+  }
+  .close {
+    margin-left: auto;
+  }
+  .btnContainer {
+    margin-top: 3.5rem;
   }
   .hamburgerContainer {
     display: block;

@@ -22,3 +22,9 @@
   font-size: var(--xs-font-size);
   font-family: var(--text-font);
 }
+
+@media screen and (max-width: 480px) {
+  .smallInputPair {
+    width: 30%;
+  }
+}

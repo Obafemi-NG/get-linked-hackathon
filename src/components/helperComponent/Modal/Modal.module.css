@@ -1,0 +1,44 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(21, 14, 40, 0.93);
+}
+
+.modal {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 40px 0px;
+  position: relative;
+  border-radius: 0.3125rem;
+  border: 1px solid #d434fe;
+  background: rgba(255, 255, 255, 0.01);
+  /* border-radius: 10px; */
+  z-index: 3;
+  text-align: center;
+}
+
+.image_1 {
+  width: 20rem;
+}
+.title {
+  color: white;
+  font-family: var(--text-font);
+  font-weight: 600;
+}
+.text {
+  color: white;
+  margin-top: 1.8rem;
+  font-family: var(--text-font);
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 80%;
+  }
+  .title {
+    font-size: 1rem;
+  }
+}

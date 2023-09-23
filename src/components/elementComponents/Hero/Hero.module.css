@@ -75,14 +75,20 @@
   bottom: 0;
 }
 
-.purpleFlare {
+.purpleFlare,
+.purpleFlare2 {
   width: 30%;
   position: absolute;
+  /* z-index: 1; */
+}
+.purpleFlare {
   top: -1rem;
   left: 16rem;
-  z-index: 1;
 }
-
+.purpleFlare2 {
+  bottom: -1rem;
+  right: 16rem;
+}
 @media screen and (max-width: 480px) {
   .heroContainer {
     height: 90vh;

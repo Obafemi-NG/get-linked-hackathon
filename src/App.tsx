@@ -22,15 +22,15 @@ function App() {
           index: true,
           element: <LandingPage />,
         },
-        {
-          path: "contact-us",
-          element: <ContactUsPage />,
-        },
-        {
-          path: "register",
-          element: <Register />,
-        },
       ],
+    },
+    {
+      path: "contact-us",
+      element: <ContactUsPage />,
+    },
+    {
+      path: "register",
+      element: <Register />,
     },
   ]);
   return <RouterProvider router={router} />;

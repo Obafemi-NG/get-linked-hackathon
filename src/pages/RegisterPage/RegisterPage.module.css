@@ -1,7 +1,7 @@
 .pageContainer {
   position: relative;
   height: 80vh;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   padding-bottom: 2rem;
 }
 .pageContent {
@@ -88,4 +88,46 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+.smallPageImage {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .pageContainer {
+    height: 90vh;
+  }
+  .navbarContainer {
+    display: none;
+  }
+  .pageContent {
+    padding: 3rem 1.5rem 3rem;
+  }
+  .smallPageImage {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  .componentTitle {
+    font-size: var(--md-font-size);
+    text-align: center;
+    width: 100%;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .componentSubTitle {
+    margin-top: 1.75rem;
+  }
+  .leftSide {
+    display: none;
+  }
+  .rightSide {
+    width: 100%;
+  }
+  .formContainer {
+    padding: 0 1.5rem;
+    background: none;
+    box-shadow: none;
+  }
 }
