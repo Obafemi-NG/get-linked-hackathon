@@ -6,12 +6,11 @@
 .navbarContent {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 8rem 1.5rem;
+  padding: 3rem 8rem 1.5rem 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .links,
 .navlinks {
   display: flex;
@@ -25,4 +24,39 @@
   color: var(--white-font-color);
   font-size: var(--s-font-size);
   font-family: var(--text-font);
+}
+.linkText:hover {
+  cursor: pointer;
+}
+
+.hamburgerContainer {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .navbarContent {
+    padding: 1.5rem 1rem;
+  }
+  .links {
+    position: absolute;
+    background-color: var(--main-background-color);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    top: 4.6rem;
+    right: 0;
+    width: 50%;
+    padding: 4rem 1.5rem 6rem;
+    z-index: 10;
+  }
+  .links,
+  .navlinks {
+    flex-direction: column;
+    align-items: unset;
+  }
+  .linkText {
+    /* background-color: green; */
+  }
+  .hamburgerContainer {
+    display: block;
+  }
 }

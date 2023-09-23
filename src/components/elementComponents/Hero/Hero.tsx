@@ -86,14 +86,16 @@ const Hero: FC = () => {
           </div>
         </div>
       </div>
-      <img src={heroImage} alt="hero_image" className={styles.heroImage} />
-      <motion.img
-        // animate={{ rotate: 360 }}
-        // transition={{ duration: 3600, repeat: Infinity }}
-        src={heroImage2}
-        alt="hero_image_2"
-        className={styles.heroImage2}
-      />
+      <div className={styles.rightSide}>
+        <img src={heroImage} alt="hero_image" className={styles.heroImage} />
+        <motion.img
+          // animate={{ rotate: 360 }}
+          // transition={{ duration: 3600, repeat: Infinity }}
+          src={heroImage2}
+          alt="hero_image_2"
+          className={styles.heroImage2}
+        />
+      </div>
     </section>
   );
 };

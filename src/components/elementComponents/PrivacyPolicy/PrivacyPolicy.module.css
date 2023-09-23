@@ -1,0 +1,172 @@
+.componentContainer {
+  position: relative;
+  /* border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18); */
+}
+.componentContent {
+  max-width: 1200px;
+  position: relative;
+  padding: 4.6rem 8rem 9rem 8rem;
+  margin: 0 auto;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.componentTitle {
+  font-size: 2rem;
+  color: var(--white-font-color);
+  font-family: var(--header-font);
+  font-weight: 700;
+  text-align: left;
+  width: 58%;
+}
+.date {
+  text-align: left;
+  color: var(--white-font-color);
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--text-font);
+  font-size: var(--xs-font-size);
+  line-height: 1.72rem;
+  margin-top: 1.06rem;
+}
+.componentSubTitle {
+  text-align: left;
+  color: var(--white-font-color);
+  font-size: var(--xs-font-size);
+  font-family: var(--text-font);
+  line-height: 1.5rem;
+  width: 35%;
+  margin-top: 1.87rem;
+  width: 90%;
+}
+.colouredText {
+  color: var(--bright-purple);
+}
+.leftSide {
+  width: 50%;
+}
+.detailsContainer {
+  border-radius: 0.3125rem;
+  border: 1px solid var(--bright-purple);
+  background: rgba(217, 217, 217, 0.03);
+  padding: 3.69rem 4rem;
+  margin-top: 4.3rem;
+}
+.topDetail {
+  line-height: 1.89rem;
+  font-size: var(--xs-font-size);
+  color: var(--white-font-color);
+  font-family: var(--text-font);
+}
+.licensing {
+  color: var(--bright-purple);
+  font-size: var(--s-font-size);
+  font-family: var(--text-font);
+  line-height: 2.14rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+.licensingSubText {
+  color: var(--white-font-color);
+  font-size: var(--xs-font-size);
+  font-family: var(--text-font);
+  line-height: 1.89rem;
+  font-weight: 700;
+}
+.policyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.13rem;
+  margin-top: 1.2rem;
+}
+.listIcon {
+  align-self: flex-start;
+  padding-top: 0.5rem;
+}
+.policy {
+  display: flex;
+  gap: 0.88rem;
+  position: relative;
+}
+.policyText {
+  color: var(--white-font-color);
+  font-family: var(--text-font);
+  font-size: var(--xs-font-size);
+  line-height: 1.89rem;
+}
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.rightSide {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: self-end;
+}
+.privacySvg {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.privacyImage {
+  margin-top: 18rem;
+  width: 90%;
+  margin-left: auto;
+  z-index: 2;
+}
+
+@media screen and (max-width: 480px) {
+  .componentContent {
+    padding: 3rem 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .componentTitle {
+    font-size: var(--md-font-size);
+    text-align: center;
+    width: 100%;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .componentSubTitle {
+    margin-top: 1.75rem;
+  }
+  .date {
+    margin-top: 0;
+  }
+  .componentSubTitle,
+  .date {
+    text-align: center;
+    font-size: 0.75rem;
+    width: 100%;
+  }
+  .detailsContainer {
+    padding: 2.81rem 0.75rem;
+  }
+  .topDetail {
+    text-align: center;
+  }
+  .topDetail,
+  .licensing,
+  .licensingSubText,
+  .policy {
+    font-size: 0.75rem;
+  }
+  .rightSide {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .svg {
+    width: 100%;
+  }
+  .privacyImage {
+    margin-top: 6rem;
+    z-index: 2;
+  }
+}

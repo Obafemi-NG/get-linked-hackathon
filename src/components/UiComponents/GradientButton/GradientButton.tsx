@@ -3,12 +3,20 @@ import styles from "./GradientButton.module.css";
 
 type Props = {
   buttonText: string;
-  onClickFunction: MouseEventHandler<HTMLButtonElement>;
+  onClickFunction?: MouseEventHandler<HTMLButtonElement>;
+  full?: boolean;
 };
 
-const GradientButton: FC<Props> = ({ buttonText, onClickFunction }: Props) => {
+const GradientButton: FC<Props> = ({
+  buttonText,
+  onClickFunction,
+  full,
+}: Props) => {
   return (
-    <button className={styles.btn} onClick={onClickFunction}>
+    <button
+      className={`${styles.btn} ${full ? styles.fullW : ""} `}
+      onClick={onClickFunction}
+    >
       {buttonText}
     </button>
   );

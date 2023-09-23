@@ -1,10 +1,16 @@
 import "./App.css";
+
+// imported react router components
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./variables.css";
-import LandingPage from "./pages/LandingPage/LandingPage";
+
+// imported pages
 import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
 import Register from "./pages/RegisterPage/Register";
 import RootLayout from "./pages/RootLayout/RootLayout";
+
+// imported css for variables
+import "./variables.css";
 
 function App() {
   const router = createBrowserRouter([

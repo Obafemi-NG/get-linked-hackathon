@@ -1,0 +1,117 @@
+.pageContainer {
+  position: relative;
+  height: 80vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.pageContent {
+  max-width: 1200px;
+  position: relative;
+  padding: 0 11rem;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftSide {
+  width: 40%;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  color: var(--bright-purple);
+  font-family: var(--header-font);
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 1.06rem;
+}
+.contactInformation,
+.address,
+.phone,
+.openTime {
+  color: var(--white-font-color);
+  font-size: 1rem;
+  font-family: var(--text-font);
+}
+.contactInformation,
+.pageTitle {
+  margin-bottom: 1.06rem;
+}
+.address {
+  margin-bottom: 1.31rem;
+}
+.phone {
+  margin-bottom: 1.37rem;
+}
+.openTime {
+  margin-bottom: 2.19rem;
+}
+.followUs {
+  color: var(--bright-purple);
+  font-family: var(--text-font);
+  font-size: var(--s-font-size);
+  font-weight: 400;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.rightSide {
+}
+.formContainer {
+  padding: 2rem 5rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.formTitle {
+  color: var(--bright-purple);
+  font-size: var(--md-font-size);
+  font-family: var(--header-font);
+  font-weight: 600;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.12rem;
+}
+.textAreaContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.label {
+  color: var(--white-font-color);
+  font-size: var(--s-font-size);
+  font-family: var(--text-font);
+  position: absolute;
+  top: 0.5rem;
+  left: 1.81rem;
+}
+.textArea {
+  background-color: transparent;
+  padding: 2rem 1.81rem 0.81rem 1.81rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  border: 1px solid var(--white-font-color);
+  resize: none;
+  outline: none;
+  color: var(--white-font-color);
+  font-family: var(--text-font);
+  font-size: var(--xs-font-size);
+}
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

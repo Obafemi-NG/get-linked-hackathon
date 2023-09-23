@@ -1,0 +1,129 @@
+.componentContainer {
+  position: relative;
+  background: #100b20;
+}
+.componentContent {
+  max-width: 1200px;
+  position: relative;
+  padding: 5.19rem 8rem 3.37rem 8rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.componentSubTitle {
+  text-align: left;
+  color: var(--white-font-color);
+  font-size: var(--xs-font-size);
+  font-family: var(--text-font);
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+.aboutSection {
+  width: 40%;
+}
+.aboutLinks {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+.aboutLink:not(:last-child) {
+  border-right: 0.15rem solid var(--bright-purple);
+}
+.aboutLink {
+  padding-right: 0.8rem;
+}
+
+.linksTitle,
+.contactTitle,
+.followUs {
+  color: var(--bright-purple);
+  font-family: var(--text-font);
+  font-size: var(--xs-font-size);
+  font-weight: 600;
+}
+.socials {
+  margin-top: 1.13rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.followUs {
+  font-weight: 400;
+}
+.linksTitle {
+  margin-bottom: 0.38rem;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.69rem;
+}
+.link,
+.contact {
+  color: var(--white-font-color);
+  font-family: var(--text-font);
+  font-size: 0.75rem;
+}
+.footerLink {
+  color: var(--white-font-color);
+  line-height: 1.29rem;
+  font-family: var(--text-font);
+  font-size: 0.75rem;
+}
+.contactTitle {
+  margin-bottom: 1.19rem;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.38rem;
+}
+.contactIcon {
+  margin-right: 1rem;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+.rightReserved {
+  color: var(--white-font-color);
+  margin-top: 3.31rem;
+  font-family: var(--text-font);
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 480px) {
+  .componentContent {
+    padding: 3rem 4rem 3rem;
+  }
+  .top {
+    flex-direction: column;
+    /* background-color: red; */
+  }
+
+  .componentTitle {
+    font-size: var(--md-font-size);
+    text-align: center;
+    width: 100%;
+  }
+  .aboutSection {
+    width: 100%;
+  }
+  .componentSubTitle {
+    margin-top: 1.75rem;
+  }
+  .usefulLinksSection {
+    margin-top: 2rem;
+  }
+  .contactSection {
+    margin-top: 3.81rem;
+  }
+}

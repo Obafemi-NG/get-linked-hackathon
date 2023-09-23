@@ -1,0 +1,120 @@
+.overviewContainer {
+  border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+}
+.overviewContent {
+  max-width: 1200px;
+  padding: 4.5rem 8rem;
+  margin: 0 auto;
+}
+
+.overview,
+.reversedOverview,
+.judgingOverview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  gap: 3rem;
+}
+.overviewImage,
+.reversedOverviewImage {
+  width: 30rem;
+}
+.descContainer,
+.reversedDescContainer {
+  width: 50%;
+}
+.title,
+.reversedTitle {
+  font-size: 2rem;
+  font-family: var(--header-font);
+  font-weight: 700;
+  width: 90%;
+  color: var(--white-font-color);
+}
+.colouredText {
+  color: var(--bright-purple);
+}
+.reversedTitle {
+  width: 40%;
+}
+.judgingOverview .title {
+  width: 55.6%;
+}
+.description {
+  font-family: var(--text-font);
+  line-height: 1.72rem;
+  margin-top: 1rem;
+  font-size: var(--xs-font-size);
+  color: var(--white-font-color);
+}
+
+.judgingOverview .descriptionList {
+  margin-top: 1.31rem;
+}
+.descriptionText .colouredText {
+  color: var(--bright-purple);
+  font-weight: 700;
+  font-size: var(--s-font-size);
+}
+.descriptionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.37rem;
+}
+.descriptionText {
+  font-family: var(--text-font);
+  font-size: var(--xs-font-size);
+  color: var(--white-font-color);
+  line-height: 1.73rem;
+}
+.btnContainer {
+  margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .overviewContent {
+    padding: 2rem 1.5rem;
+  }
+  .overview,
+  .reversedOverview,
+  .judgingOverview {
+    flex-direction: column;
+    justify-content: unset;
+    /* background-color: red; */
+  }
+
+  .overviewImage,
+  .reversedOverviewImage {
+    width: 100%;
+  }
+  .descContainer,
+  .reversedDescContainer {
+    width: 100%;
+  }
+  .reversedOverviewImage {
+    order: 1;
+  }
+  .reversedDescContainer {
+    order: 2;
+  }
+  .title,
+  .reversedTitle,
+  .judgingOverview .title {
+    text-align: center;
+    width: 100%;
+    font-size: var(--md-font-size);
+  }
+  .description {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .descriptionText {
+    text-align: center;
+  }
+  .btnContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,11 +1,12 @@
 .heroContainer {
-  padding-top: 2rem;
-  padding-left: 8rem;
   position: relative;
   height: 85vh;
   border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+  padding-top: 2rem;
 }
 .heroContent {
+  padding-left: 8rem;
+  padding-right: 8rem;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -24,7 +25,7 @@
 }
 
 .leftSection {
-  width: 62%;
+  width: 70%;
   top: 50%;
   transform: translate(0, -50%);
   position: relative;
@@ -77,6 +78,57 @@
 .purpleFlare {
   width: 30%;
   position: absolute;
-  top: -5rem;
+  top: -1rem;
   left: 16rem;
+  z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .heroContainer {
+    height: 90vh;
+  }
+  .heroContent {
+    padding: 0 1.5rem;
+  }
+  .heroHeader {
+    font-size: 2rem;
+  }
+  .typeSetIcon {
+    width: 7rem;
+    right: 1.5rem;
+    top: 3.5rem;
+  }
+  .typewriterContainer {
+    right: 1.5rem;
+  }
+  .creativeIcon {
+    width: 1.1rem;
+    bottom: 2rem;
+    right: 1rem;
+  }
+  .leftSection {
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .heroHeader {
+    text-align: center;
+  }
+  .heroSubheader {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .textIcon {
+    width: 1.4rem;
+  }
+  .heroImage,
+  .heroImage2 {
+    width: 100%;
+    padding-top: 1rem;
+  }
+  .heroImage2 {
+    right: 0;
+  }
 }

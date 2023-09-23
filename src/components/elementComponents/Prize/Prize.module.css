@@ -1,0 +1,153 @@
+.componentContainer {
+  position: relative;
+  border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+}
+.componentContent {
+  max-width: 1200px;
+  position: relative;
+  padding: 4.6rem 8rem 9rem 8rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  width: 50%;
+  margin-left: auto;
+}
+.componentTitle {
+  font-size: 2rem;
+  color: var(--white-font-color);
+  font-family: var(--header-font);
+  font-weight: 700;
+  text-align: left;
+  width: 50%;
+}
+.componentSubTitle {
+  text-align: left;
+  color: var(--white-font-color);
+  font-size: var(--xs-font-size);
+  font-family: var(--text-font);
+  line-height: 1.5rem;
+  width: 35%;
+  margin-top: 0.75rem;
+  width: 70%;
+}
+.colouredText {
+  color: var(--bright-purple);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10rem;
+}
+.leftSide {
+  width: 40%;
+}
+.championImage {
+  width: 100%;
+}
+
+.rightSide {
+  gap: 1.88rem;
+  display: flex;
+  margin-top: 2rem;
+}
+.medalImage {
+  width: 10rem;
+  position: absolute;
+  top: -5rem;
+}
+.bigMedalImage {
+  width: 15rem;
+  top: -9rem;
+}
+.prizeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 6.94rem 1rem 2rem 1rem;
+  border-radius: 0.5rem;
+}
+.firstPrize {
+  margin-bottom: -2rem;
+  margin-top: 2rem;
+  border: 1px solid #903aff;
+  background: rgba(144, 58, 255, 0.12);
+}
+.otherPrize {
+  background: rgba(212, 52, 254, 0.12);
+  border: 1px solid var(--bright-purple);
+}
+.position {
+  font-weight: 700;
+  font-size: var(--xl-font-size);
+  font-family: var(--text-font);
+  color: var(--white-font-color);
+}
+.runner {
+  font-weight: 600;
+  font-family: var(--text-font);
+  color: var(--white-font-color);
+  font-size: var(--l-font-size);
+}
+.prize {
+  font-size: 2rem;
+  font-family: var(--text-font);
+  font-weight: 700;
+  line-height: 4.33rem;
+  color: var(--bright-purple);
+}
+.firstPrize .prize {
+  color: #903aff;
+}
+
+@media screen and (max-width: 480px) {
+  .componentContent {
+    padding: 3rem 1.5rem 6rem;
+  }
+  .top {
+    width: 100%;
+    margin-left: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .componentTitle {
+    font-size: var(--md-font-size);
+    text-align: center;
+  }
+  .componentSubTitle {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  .bottom {
+    flex-direction: column;
+    margin-top: 2.5rem;
+    justify-content: unset;
+    gap: 3rem;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .medalImage {
+    width: 4rem;
+    top: -2rem;
+  }
+  .bigMedalImage {
+    width: 7rem;
+    top: -5rem;
+  }
+  .position,
+  .runner {
+    font-size: 0.75rem;
+  }
+  .prize {
+    font-size: var(--xs-font-size);
+  }
+  .prizeCard {
+    padding: 2rem 0.5rem 0.5rem;
+  }
+}

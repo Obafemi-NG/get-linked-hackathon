@@ -1,5 +1,3 @@
-/* @import "./variables.css"; */
-
 .logoText {
   font-family: var(--header-font);
   font-size: var(--xl-font-size);
@@ -8,4 +6,13 @@
 }
 .linked {
   color: var(--bright-purple);
+}
+.logoText:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .logoText {
+    font-size: 1.25rem;
+  }
 }

@@ -5,3 +5,9 @@
   font-weight: 700;
   font-style: italic;
 }
+
+@media screen and (max-width: 480px) {
+  .typeText {
+    font-size: var(--s-font-size);
+  }
+}

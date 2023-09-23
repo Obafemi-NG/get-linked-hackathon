@@ -1,0 +1,123 @@
+.componentContainer {
+  position: relative;
+  border-bottom: 0.062rem solid rgba(255, 255, 255, 0.18);
+}
+.componentContent {
+  max-width: 1200px;
+  position: relative;
+  padding: 4.6rem 8rem 9rem 8rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.componentTitle {
+  font-size: 2rem;
+  color: var(--white-font-color);
+  font-family: var(--header-font);
+  font-weight: 700;
+  text-align: center;
+}
+.componentSubTitle {
+  text-align: center;
+  color: var(--white-font-color);
+  font-size: var(--xs-font-size);
+  font-family: var(--text-font);
+  line-height: 1.5rem;
+  width: 35%;
+  margin-top: 0.75rem;
+  width: 50%;
+}
+
+.sponsorsContainer {
+  width: 100%;
+  padding: 9rem 0;
+  margin-top: 4rem;
+  border-radius: 0.3125rem;
+  border: 1px solid var(--bright-purple);
+  background: rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topSponsors,
+.bottomSponsors {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* width: 100%;
+  justify-content: center;
+  background-color: red; */
+}
+.topLogoContainer,
+.bottomLogoContainer {
+  /* background-color: red; */
+  height: 8.5rem;
+  width: 15rem;
+  position: relative;
+  /* position: absolute; */
+  /* top: 0;
+  bottom: 50%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topLogoContainer {
+  border-bottom: 0.25rem solid var(--bright-purple);
+}
+.topLogoContainer:not(:last-child):after,
+.bottomLogoContainer:not(:last-child):after {
+  content: "";
+  background: var(--bright-purple);
+  position: absolute;
+  right: 0;
+  height: 80%;
+  width: 0.25rem;
+}
+.topLogoContainer:not(:last-child):after {
+  top: 0;
+}
+.bottomLogoContainer:not(:last-child):after {
+  bottom: 0;
+}
+.topSponsorLogo {
+  padding-bottom: 2rem;
+}
+.bottomSponsorLogo {
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .componentContent {
+    padding: 3rem 1.5rem 6rem;
+  }
+  .componentTitle {
+    font-size: var(--md-font-size);
+    text-align: center;
+  }
+  .componentSubTitle {
+    text-align: center;
+    font-size: 0.75rem;
+    width: 90%;
+  }
+  .sponsorsContainer {
+    padding: 2.3rem 0;
+  }
+  .topLogoContainer,
+  .bottomLogoContainer {
+    width: 5rem;
+    height: 4rem;
+  }
+  .topSponsorLogo,
+  .bottomSponsorLogo {
+    width: 70%;
+  }
+  .topLogoContainer:not(:last-child):after,
+  .bottomLogoContainer:not(:last-child):after {
+    width: 0.125rem;
+  }
+  .topLogoContainer {
+    border-bottom: 0.125rem solid var(--bright-purple);
+  }
+}
